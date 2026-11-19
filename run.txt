@@ -1,0 +1,8 @@
+Open CMD and Navigate to this Directory.
+
+In 1 terminal
+uvicorn inference_service:app --host 0.0.0.0 --port 8000
+
+In another terminal
+streamlit run annotation_ui.py
+
