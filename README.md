@@ -58,3 +58,21 @@ In the UI, choose **Image** or **Video**, upload a `jpg`, `jpeg`, `png`, `mp4`, 
 - Auto-detection runs on every frame in `/predict_video` and `/predict_video_manual`, so processing can be slow on CPU.
 - `ImageFont.truetype("arial.ttf")` is tried first and falls back to PIL's default font if Arial is not found.
 - The `seconds` form field of `/get_initial_labels` is accepted but unused.
+
+## Pretrained YOLO weights (not included)
+
+The following off-the-shelf Ultralytics checkpoints were removed from this repository because they are publicly downloadable. The code loads them by name, and Ultralytics downloads them automatically on first use:
+
+- `yolov10m.pt`
+- `yolov10s.pt`
+- `yolov8l.pt`
+- `yolov8m.pt`
+- `yolov8n.pt`
+- `yolov8s.pt`
+
+```python
+from ultralytics import YOLO
+model = YOLO("yolov8n.pt")  # downloaded automatically if not present
+```
+
+Or download them manually from https://github.com/ultralytics/assets/releases
